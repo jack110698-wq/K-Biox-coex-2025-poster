@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>팀 대시보드</title>
+  <style>
+    :root { --maxw: 1100px; }
+    * { box-sizing: border-box }
+    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Pretendard,sans-serif; margin:0; background:#0b1020; color:#eef1ff;}
+    header { border-bottom:1px solid #223; background:linear-gradient(180deg,#101735,#0b1020); }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 20px; }
+    h1 { margin: 0 0 6px 0; font-weight:700; letter-spacing:.3px; }
+    p.lead { margin:0 0 12px 0; opacity:.85 }
+    .card { background:#121a36; border:1px solid #223; border-radius:16px; padding:16px; box-shadow:0 6px 20px rgba(0,0,0,.25);}
+    .iframeBox { position:relative; width:100%; padding-top: 72vh; border-radius:12px; overflow:hidden; border:1px solid #2a355a; }
+    .iframeBox iframe { position:absolute; inset:0; width:100%; height:100%; border:0; background:#0b1020;}
+    .row { display:flex; gap:12px; flex-wrap:wrap; margin:12px 0;}
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; text-decoration:none; background:#1a2450; color:#fff; border:1px solid #2a355a; }
+    .btn:hover { filter:brightness(1.1); }
+    footer { opacity:.6; font-size:13px; padding:30px 0; text-align:center;}
+    .note { margin-top:10px; opacity:.8; font-size:14px; line-height:1.6; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1> 2025 k-biox coex poster </h1>
+      <p class="lead">업데이트 및 수정사항 발생시 정보 공유 부탁드립니다.</p>
+      <div class="row">
+        <a class="btn" href="https://docs.google.com/spreadsheets/d/13eRR-PhQisnDBxhrWoMnxXkfru6U1isM/edit" target="_blank" rel="noopener">원본 시트 열기</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="card">
+      <h2 style="margin:6px 0 12px 0;">Google Sheets 임베드</h2>
+      <div class="iframeBox">
+        <!-- 로그인 필요(권장: 팀 내부용) -->
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/13eRR-PhQisnDBxhrWoMnxXkfru6U1isM/preview"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+
+        <!-- 완전 공개 필요 시(주의: 민감정보 금지) '파일→웹에 게시'로 받은 pubhtml URL 사용
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/REPLACE_WITH_PUB_ID/pubhtml?widget=true&amp;headers=false"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+        -->
+      </div>
+      <div class="note">
+        <strong>직함 확인</strong><br/>
+        한글 직함 제외 영어 직함은 영어이름을 따로 사용하시는 분도 계십니다. 이중확인 및 추가 업데이트 수정 부탁드립니다다.
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3 style="margin:6px 0 10px 0;">공지/메모</h3>
+      <ul style="margin:0 0 0 18px; line-height:1.7;">
+        <li>업데이트, 수정사항 모두 공유 부탁드립니다.</li>
+       </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    © 팀 대시보드
+  </footer>
+</body>
+</html>
